@@ -283,7 +283,7 @@
     content: "eve client";
     font-size: 18px;
     font-weight: bold;
-    color: #FFB6C1;
+    color: var(--eveCLR);
     padding: 0;
     position: fixed;
     right: 40px;
@@ -403,7 +403,7 @@
     filter: brightness(1);
 }
 .weapKey {
-    color: #FFB6C1 !important;
+    color: var(--eveCLR) !important;
 }
 #healthBar {
     transform: scale(1.4, .9);
