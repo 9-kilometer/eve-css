@@ -1,0 +1,433 @@
+/* eve client Discord: 9km#7612 Github: 9-kilometer Krunker: 9km */
+
+:root {
+    --eveCLR: #FFB6C1;
+    --clanCLR: rgba(58, 61, 110, .5);
+}
+@font-face {
+    font-family: 'GameFont';
+    src: url(https://fonts.cdnfonts.com/s/27677/Aller_Std_Rg.woff);
+}
+#mainLogo,
+#mainLogoFace,
+#aMerger,
+#newsHolder,
+#youNewDiv,
+#onetrust-consent-sdk,
+#aHolder,
+.imageButton,
+#editorBtnM,
+.headerBarRight .verticalSeparator,
+#seasonLabel,
+.krSocial,
+#mailCount,
+#voiceDisplay,
+#bubbleContainer,
+.endAHolder,
+#igXPBar,
+.button.small.buttonO img,
+#tlInfHold,
+.setSugBox,
+.lC-cube,
+#curGameInfo,
+#chatSwitch,
+#maxHP,
+#timerIcon,
+#ammoIcon, 
+#uiBase.onMenu #specTeam0,
+#uiBase.onMenu #spec0,
+#uiBase.onMenu #spec1,
+#uiBase.onMenu #specNames,
+#uiBase.onMenu #specStats,
+#uiBase.onMenu #specContr,
+#uiBase.onMenu #specKPDContr,
+#uiBase.onMenu #specSus,
+#uiBase.onMenu #specTeam1,
+#uiBase.onMenu #specGMessage,
+#uiBase.onMenu #specGameInfo,
+#scoreCount .material-icons,
+#livesCount .material-icons,
+#loadEditrBtn {
+    display: none !important;
+}
+
+/* MENU */
+
+.button,
+.button:hover{
+    border: hidden!important;
+}
+.menBtnIcn {
+    color: #fff !important;
+}
+#gameNameHolder {
+    top: 360px;
+    height: auto;
+    z-index: -9 !important;
+    transform: translate(-50%, 0);
+}
+#uiBase.onMenu #chatHolder::before {
+    content: url('https://cdn.discordapp.com/attachments/1064674927690645616/1082297824156319834/eveCHAT.gif');
+    position: relative;
+}
+#instructions {
+    font-size: 0px;
+    animation: none
+}
+#instructions:after {
+    font-size: 28px;
+    color: var(--eveCLR);
+    content: 'eve client';
+    animation: grow .8s infinite alternate;
+}
+.xpBarB {
+    background-image: none;
+    background-color: var(--eveCLR);
+}
+.progressBarInner {
+	background: var(--eveCLR);
+	border-radius: 0;
+}
+
+/* LOADING SCREEN */
+
+#initLoader {
+    background-color: #000;
+}
+#loadTipsHolder {
+    bottom: unset;
+    top: 200px;
+    width: unset;
+    font-size: 0;
+    position: fixed;
+}
+#loadInfoRHolder::before {
+    content: url('https://cdn.discordapp.com/attachments/1064674927690645616/1082301037412626442/eveHAND_1.gif');
+    position: relative;
+    top: 20px;
+}
+#lC-cont::before {
+    content: url('https://cdn.discordapp.com/attachments/1064674927690645616/1081903520099340359/3eve.gif');
+    display: block;
+    margin-top:50px;
+}
+#loadGamNm {
+    font-size: 32px;
+    color: #fff;
+}
+#loadInfoLHolder {
+    font-size: 0;
+    color: #fff;
+    position: fixed;
+}
+#loadInfoLHolder::before {
+    content: '[eve]';
+    font-size: 28px;
+    color: var(--eveCLR);
+}
+#loadInfoLHolder::after {
+    content: "github.com/9-kilometer";
+    font-size: 28px;
+    color: #fff;
+}
+#loadInfoRHolder {
+    font-size: 0;
+    position: fixed;
+}
+#loadEditrBtn,
+#loadTipsHolder span,
+.lC-cube  {
+    display: none;
+} 
+
+/* TIMER */
+
+#uiBase.onMenu #spectateUI {
+    display: block!important;
+    position: fixed;
+    bottom: 48.5%;
+    top: unset;
+    left: 50%;
+    right: unset;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+}
+#uiBase.onMenu #spectateHUD {
+    display: flex;
+    justify-content: center;
+    transform: unset;
+    left: unset;
+}
+#uiBase.onMenu #specTimer {
+    display: block !important;
+    font-size: 28px;
+    background-color: transparent;
+    color: rgba(255,255,255,.5);
+}
+
+/* CHAT */
+
+#chatHolder {
+    padding: 8px;
+}
+.onGame #chatHolder {
+    top: 100px !important;
+    left: unset !important;
+    right: 20px;
+}
+#uiBase.onGame #chatList {
+    text-align: right;
+}
+#chatList {
+    background-color: transparent;
+}
+#chatList::-webkit-scrollbar {
+    display: none;
+}
+.chatItem {
+    background-color: transparent !important;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin: 0 !important;
+    max-width: 280px;
+    font-weight: bold;
+}
+.chatMsg {
+    color: var(--eveCLR) !important;
+}
+.chatMsg span[style*="#9eeb56"] {
+    color: var(--eveCLR) !important;
+}
+.chatMsg[style="color:#fc03ec"] {
+    color: var(--eveCLR) !important;
+}
+.chatMsg[style*="color:#eb5656"] {
+	color: #e10000 !important;
+}
+#chatInputHolder {
+    background-color: transparent;
+    border: none;
+}
+#chatInput {
+    color: var(--eveCLR) !important;
+    background-color: transparent;
+    border-radius: 0px;
+    transform: scale(0);
+    height: 0;
+    padding: 0;
+    transition-duration: 0.25s;
+    font-size: 16px;
+    font-weight: bold;
+}
+#chatInput:focus {
+    height: 100%;
+    padding: 8px 16px;
+    transform: scale(1);
+}
+#chatInput::placeholder {
+    color: var(--eveCLR) !important;
+}
+.weaponChatIcon, .headShotChatIcon {
+    filter: opacity(0.75) drop-shadow(0 0 0 #000);
+}
+
+/* LEADERBOARD/KILLSTREAK */
+
+#leaderDisplay {
+    background-color: transparent !important;
+    position: fixed !important;
+    right: unset !important;
+    left: 20px;
+    top: 210px;
+}
+#leaderDisplay::before {
+    content: 'Players:';
+    color: rgba(255,255,255,.5);
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    top: 180px;
+    position: fixed;
+}
+.leaderItem {
+    font-size: 18px;
+    font-weight: bold;
+}
+.leaderName {
+    color: #eb5656;
+}
+.leaderCounter, .leaderNameM, .leaderScore {
+    color: #fff;
+}
+.leaderNameF {
+    color: #fff;
+    opacity: 0.5;
+}
+.leaderNameM span {
+    color: var(--clanCLR) !important;
+} 
+.topRightCounters {
+    position: fixed;
+    left: unset !important;
+    right: 25px;
+    top: 40px;
+    width: auto !important;
+    background-color: transparent;
+}
+.topRightCounters::after {
+    content: "eve client";
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFB6C1;
+    padding: 0;
+    position: fixed;
+    right: 40px;
+    top: 20px;
+    justify-content: center;
+}
+.countIcon {
+    font-size: 24px;
+    line-height: 64px;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 12px 24px 0px 24px;
+}
+
+#killsIcon, #deathsIcon, #streakIcon, #kdIcon {
+    width: 24px;
+    height: 24px;
+}
+#deathsVal,
+#killsVal,
+#livesDisp,
+#streakVal,
+#myScoreVal {
+    color: #fff !important;
+    font-size: 24px;
+    font-weight: bold;
+}
+#killStreakHolder {
+    position: fixed;
+    bottom: 160px;
+    left: 20px;
+}
+
+/* RELOAD */
+
+#reloadMsg::before {
+    content: 'Reload!';
+    color: var(--eveCLR) !important;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+#reloadMsg {
+    background-color: transparent !important;
+    position: absolute;
+    border: none;
+    margin-right: -50%;
+    left: 49.75%;
+    transform: translate(-50%, 0);
+    bottom: 30%;
+    line-height: 0;
+    padding-left: 0;
+    padding-right: 0;
+    color: #000;
+    height: 100px;
+    font-size: 0;
+    z-index: 2 !important;
+}
+#ammoDisplay {
+    padding: 0 !important;
+    z-index: 4;
+    position: fixed;
+    left: calc(50% - 100px);
+    bottom: 30%;
+    width: 200px;
+    height: 20px;
+    background-image: linear-gradient(var(--eveCLR), var(--eveCLR));
+    background-color: transparent !important;
+    text-align: right;
+    letter-spacing: 0;
+    -webkit-transform: unset !important;
+    transform: unset !important;
+}
+
+/* HUD */
+
+#ammoVal {
+    font-weight: bold;
+    text-overflow: clip;
+    font-size: 66px;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    background-color: rgba(0,0,0,.35);
+    width: auto;
+    color: #fff;
+    padding-right: 70px;
+    padding-left: 20px;
+}
+#ammoMax {
+    color: #fff;
+    font-weight: bold;
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    font-size: 24px;
+}
+#ammoMax::first-letter {
+    font-size: 24px;
+    margin-right: 2px;
+    font-style: italic;
+}
+#weapDisplay {
+    transform: scale(1.2, 1);
+    position: fixed;
+    bottom: 120px;
+    right: 40px;
+}
+.weapIcon {
+    opacity: .25;
+    filter: brightness(0);
+}
+.weapIcon[style*="1"] {
+    opacity: 1 !important;
+    filter: brightness(1);
+}
+.weapKey {
+    color: #FFB6C1 !important;
+}
+#healthBar {
+    transform: scale(1.4, .9);
+    position: relative;
+    padding-left: 55px;
+}
+#hudClassIcon {
+    background-color: transparent !important;
+}
+#hudClassImg {
+    border-radius: 0;
+    width:100%;
+    height:100%;
+    image-rendering:unset !important;
+    content: url(https://cdn.discordapp.com/attachments/1064674927690645616/1081903520099340359/3eve.gif) !important;
+}
+#challIcon {
+    width: 16px;
+    height: 16px;
+}
+#ingameFPS {
+    color: #fff !important; 
+}
+#krTagHolder {
+    margin-right: 200px;
+    margin-bottom: 10px;
+}
