@@ -67,7 +67,7 @@
     transform: translate(-50%, 0);
 }
 #uiBase.onMenu #chatHolder::before {
-    content: url('https://cdn.discordapp.com/attachments/1064674927690645616/1082297824156319834/eveCHAT.gif');
+    content: url('https://cdn.discordapp.com/attachments/1064674927690645616/1082401800243658854/eveMSG.gif');
     position: relative;
 }
 #instructions {
